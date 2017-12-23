@@ -1,22 +1,22 @@
 class ExpandableString
   def initialize(str)
-    @str = str
+    @positive_str = str
   end
 
   def [](cur)
-    @str[cur]
+    @positive_str[cur]
   end
 
   def []=(cur, val)
     if cur == -1
-      @str = val + @str
+      @positive_str = val + @positive_str
     else
-      @str[cur] = val
+      @positive_str[cur] = val
     end
   end
 
   def to_s
-    @str.to_s
+    @positive_str.to_s
   end
 end
 
