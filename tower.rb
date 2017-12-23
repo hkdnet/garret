@@ -6,39 +6,9 @@ WHITE = 'o'
 SPACE = nil
 BAR = '|'
 
+require 'expandable_string'
 require 'tower_factory'
-
-class ExpandableString
-  def initialize(str)
-    @str = str
-  end
-
-  def [](cur)
-    @str[cur]
-  end
-
-  def []=(cur, val)
-    if cur == -1
-      @str = val + @str
-    else
-      @str[cur] = val
-    end
-  end
-
-  def to_s
-    @str.to_s
-  end
-end
-
-class State
-  def process(input, cur)
-    raise NotImplementedError
-  end
-
-  def done?
-    false
-  end
-end
+require 'state'
 
 class Tower
   class Invalid < StandardError; end
