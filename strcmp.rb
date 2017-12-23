@@ -24,7 +24,7 @@ TowerFactory.build(<<-EOS.chomp, Strcmp)
 2||R4
 3wwR3
 3bbR3
-3||R4
+3||R5
 4xxR4
 4wxL6
 5xxR5
@@ -38,6 +38,10 @@ TowerFactory.build(<<-EOS.chomp, Strcmp)
 7  LF
 EOS
 
-Strcmp.new(DATA.read.chomp)
+DATA.read.each_line do |line|
+  Strcmp.new(line.chomp)
+end
 __END__
-x|x
+b|b
+w|w
+wb|wb
