@@ -1,10 +1,6 @@
 require 'pry'
 require 'English'
 $LOAD_PATH.unshift(File.expand_path('lib', __dir__))
-BLACK = 'x'
-WHITE = 'o'
-SPACE = nil
-BAR = '|'
 
 require 'expandable_string'
 require 'tower_factory'
