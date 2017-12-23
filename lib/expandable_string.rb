@@ -1,15 +1,20 @@
 class ExpandableString
   def initialize(str)
     @positive_str = str
+    @negative_str = ' '
   end
 
   def [](cur)
-    @positive_str[cur]
+    if cur.negative?
+      @negative_str[-cur]
+    else
+      @positive_str[cur]
+    end
   end
 
   def []=(cur, val)
-    if cur == -1
-      @positive_str = val + @positive_str
+    if cur.negative?
+      @negative_str[-cur] = val
     else
       @positive_str[cur] = val
     end
