@@ -28,12 +28,6 @@ class Tower
   end
 end
 
-class StateF < State
-  def done?
-    true
-  end
-end
-
 # BLACK = 'x'
 # WHITE = 'o'
 # SPACE = nil
