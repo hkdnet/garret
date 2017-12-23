@@ -18,8 +18,8 @@ class Tower
     cur = 0
     state = initial_state
     loop do
-      puts "str  : #{@input}"
-      puts "cur  : #{cur}   state: #{state.class}"
+      puts "str: #{@input}"
+      puts "cur: #{cur}   state: #{state.class}"
       puts "processing..."
       cur, state = state.process(@input, cur)
       raise Invalid unless state
