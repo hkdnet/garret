@@ -38,6 +38,7 @@ module TowerFactory
             c = input[cur]
             insn = insns.find { |e| e.match?(c) }
             if insn.nil?
+              binding.pry
               raise "No Macth id:#{id}, #{cur} #{input}"
             end
             input[cur] = insn.processed
